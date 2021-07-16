@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.css';
+// bootstrap-social is missing from my main site.
 import 'bootstrap-social/bootstrap-social.css';
 import './index.css';
 import App from './App';

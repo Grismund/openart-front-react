@@ -10,7 +10,12 @@ h2 {
 }
 
 .footer-links {
-  color: white; }
+  color: white;
+}
+
+/* a:hover {
+  color: gold;
+} */
 
 .newsletter {
   background-color: #272727;
@@ -19,19 +24,23 @@ h2 {
 
 .features {
   background-color: #d0d0d0;
-  padding: 25px 0px; }
+  padding: 25px 0px;
+}
 
 .foots {
   background-color: #1a1a1a;
   padding: 25px 0px;
-  color: white; }
+  color: white;
+}
 
 .cHead {
   background-color: #66626f;
-  color: white; }
+  color: white;
+}
 
 body {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+}
 
 .loginFixed {
   position: fixed;
@@ -39,15 +48,17 @@ body {
   right: 0;
   /* left: auto; */
   /* z-index: 1030; */
-  margin-top: 15px;
+  margin-top: 4px;
   /* margin-right: 20px; } */
 }
 
 .half-wide {
-  width: 50%; }
+  width: 50%;
+}
 
 .carousel-inner {
-  max-height: 750px; }
+  max-height: 750px;
+}
 
 .rule {
   margin: 30px 0px;
@@ -62,4 +73,10 @@ body {
   margin-bottom: 0rem;
   border: none;
   background-color: #f1f1f1;
+}
+
+.logo {
+  width: 5em;
+  margin-left: 12px;
+  margin-right: 10px;
 }
