@@ -37,11 +37,11 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar light sticky="top" expand="md">
+                <Navbar light sticky="top" color="white" expand="md">
                     <div className="container-fluid">   
                         <NavbarToggler onClick={this.toggleNav} />
+                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/imges/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/imges/raw-logo.png" alt="OpenArt Logo" /></NavbarBrand>
                             <Nav navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
@@ -59,17 +59,19 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-                            <span className="navbar-text ml-auto">
-                                <Button outline onClick={this.toggleModal}>
-                                    <i className="fa fa-sign-in fa-lg" /> Login
-                                </Button>
-                            </span>
-                            <span className="navbar-text ml-auto">
-                                <Button outline>
-                                    <i className="fa fa-shopping-cart fa-lg" />
-                                </Button>
-                            </span>
                         </Collapse>
+                            <div className="loginFixed">
+                                <span className="navbar-text ml-auto">
+                                    <Button outline onClick={this.toggleModal}>
+                                        <i className="fa fa-sign-in fa-lg" /> Login
+                                    </Button>
+                                </span>
+                                <span className="navbar-text ml-auto">
+                                    <Button outline>
+                                        <i className="fa fa-shopping-cart fa-lg" />
+                                    </Button>
+                                </span>
+                            </div>
                     </div>
                 </Navbar>
         </React.Fragment>

@@ -45,11 +45,11 @@ body {
 .loginFixed {
   position: fixed;
   top: 0;
-  right: 0;
+  margin-top: 4px;
+  right: 4px;
   /* left: auto; */
   /* z-index: 1030; */
-  margin-top: 4px;
-  /* margin-right: 20px; } */
+  /* margin-right: 20px; */
 }
 
 .half-wide {
