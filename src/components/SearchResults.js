@@ -20,13 +20,15 @@ class SearchResults extends Component {
         fetchedDetails: null,
     };
 
-    async componentDidMount() {
-        const searchBox = 'cy twombly';
+    handleGetRequest = async () => {
+    // async componentDidMount() {
+        const searchBox = 'Alphonse Marie Mucha';
         const api_url = 'https://api.artic.edu/api/v1/artworks/search?q='
-        const searchAppend = '&fields=id,title,artist_display,medium_display,image_id'
+        const searchAppend = '&fields=id,title,artist_title,medium_display,image_id'
 
         const response = await fetch(api_url + searchBox + searchAppend);
         const searchResults = await response.json();
+        
         this.setState({ 
             loading: false,
             fetchedArt: searchResults.data, 
@@ -38,35 +40,42 @@ class SearchResults extends Component {
 
     // {this.state.fetchedArt.map((artwork) => <div className="h3">{artwork.title}</div> )}
     render() {
+
         return (
             <React.Fragment>
                 
-                {this.state.loading ? (<div>Loading . . .</div>) : 
-                    <div className="col-md-9" >
-
-                            {this.state.fetchedArt.map((artwork) =>
-                                  <div className="card border-0 mb-4">
-                                    <img className="card-img" src={
-                                        `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
-                                        } alt="" 
-                                    />
-                                    <div className="container-flex mr-">
-                                        <div className="row card-header mx-0">
-                                            <div className="col-sm-5">
-                                                <div className="h3">{artwork.title}</div>
-                                                <div className="h6">{artwork.artist_display}</div>
-                                            </div>                                
-                                            <div className="col-sm-7">
-                                                <button className="col-sm-4 btn btn-dark btn-block text-nowrap ml-auto">Buy Prints</button>
+                {this.state.loading ? (<div>Loading . . .</div>) :
+                    <div className="container-fluid" >
+                        <div className="row">
+                            {this.state.fetchedArt.map((artwork) => {
+                                return(
+                                    <div className="col-md-4">
+                                        <div className="card border-0 mb-4">
+                                            <img className="card-img" src={
+                                                `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
+                                                } alt={artwork.title} 
+                                            />
+                                            <div>
+                                                <div className="row searchResultCardText mx-0">
+                                                    <div className=" h3">{artwork.title}</div>
+                                                </div>
+                                                <div className="row searchResultCardText mx-0">
+                                                    <div className=" h6">{artwork.artist_title}</div>
+                                                </div>
+                                                <div className="row searchResultCardText mx-0">
+                                                    <button className="col-sm-3 col-md-6 btn btn-dark btn-block text-nowrap mr-auto">Buy Prints</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            )}
-
+                                )
+                            })
+                            }
+                        </div>
                     </div>
-                }               
-            </React.Fragment>       
-        )}
+                }
+            </React.Fragment>
+        )
+    }
 }
 export default SearchResults;

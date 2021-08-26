@@ -4,7 +4,7 @@ function SearchCheck() {
     return (
         <React.Fragment>
 
-            <nav class="col-md-2 form-group">                
+            <nav class="col-md-2 form-group">
                 <h3 class="h3 ">Medium</h3>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="mediumPainting"/>

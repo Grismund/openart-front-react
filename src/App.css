@@ -80,3 +80,9 @@ body {
   margin-left: 12px;
   margin-right: 10px;
 }
+
+.searchResultCardText {
+    padding: 0.55rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+}
