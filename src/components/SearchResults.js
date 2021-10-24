@@ -20,11 +20,11 @@ class SearchResults extends Component {
         fetchedDetails: null,
     };
 
-    handleGetRequest = async () => {
-    // async componentDidMount() {
-        const searchBox = 'Alphonse Marie Mucha';
-        const api_url = 'https://api.artic.edu/api/v1/artworks/search?q='
-        const searchAppend = '&fields=id,title,artist_title,medium_display,image_id'
+    // handleGetRequest = async () => {
+    async componentDidMount() {
+        const searchBox = 'marigold';
+        const api_url = 'https://api.artic.edu/api/v1/artworks/search?q=';
+        const searchAppend = '&fields=id,title,artist_title,medium_display,image_id';
 
         const response = await fetch(api_url + searchBox + searchAppend);
         const searchResults = await response.json();
@@ -37,13 +37,11 @@ class SearchResults extends Component {
     }
 
 
-
     // {this.state.fetchedArt.map((artwork) => <div className="h3">{artwork.title}</div> )}
     render() {
 
         return (
             <React.Fragment>
-                
                 {this.state.loading ? (<div>Loading . . .</div>) :
                     <div className="container-fluid" >
                         <div className="row">
