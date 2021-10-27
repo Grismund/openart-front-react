@@ -94,7 +94,7 @@ class Header extends Component {
         //             </button>
 
         //             <a className="navbar-brand mr-auto" href="#">
-        //                 <img src="/assets/imges/raw-logo.png" class="logo"/>
+        //                 <img src="/assets/imges/raw-logo.png" className="logo"/>
         //             </a>
         //             <div className="collapse navbar-collapse" id="oaNavbar">
         //                 <ul className="navbar-nav ml-1">

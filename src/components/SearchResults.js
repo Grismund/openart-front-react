@@ -6,12 +6,18 @@ import { render } from '@testing-library/react';
 
 // https://api.artic.edu/api/v1/artworks?fields=id,title,artist,medium
 
+// Get only public domain art
 // https://api.artic.edu/api/v1/artworks/search?q=cats&query[term][is_public_domain]=true
 
 // Grabbing an image using the id
 //https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
 //example
 //https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=2&fields=id,title,image_id
+
+// Video explaining this process
+//https://www.youtube.com/watch?v=3OolwmBExB0
+
+
 class SearchResults extends Component {
 
     state = {
@@ -20,13 +26,15 @@ class SearchResults extends Component {
         fetchedDetails: null,
     };
 
-    // handleGetRequest = async () => {
-    async componentDidMount() {
-        const searchBox = 'marigold';
+    handleGetRequest = async (e) => {
+    // async componentDidMount() {
+
+        const searchTerm = e.target.elements.searchValue.value;
+        // const searchTerm = 'Susan Rothenberg';
         const api_url = 'https://api.artic.edu/api/v1/artworks/search?q=';
         const searchAppend = '&fields=id,title,artist_title,medium_display,image_id';
 
-        const response = await fetch(api_url + searchBox + searchAppend);
+        const response = await fetch(api_url + searchTerm + searchAppend);
         const searchResults = await response.json();
         
         this.setState({ 
@@ -34,6 +42,7 @@ class SearchResults extends Component {
             fetchedArt: searchResults.data, 
         });
         console.log(this.state.fetchedArt);
+        console.log(searchTerm)
     }
 
 
