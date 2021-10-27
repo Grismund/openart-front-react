@@ -14,7 +14,7 @@ import SearchResults from './SearchResults';
 
 
 const UserSearchInput = (props) => {
-    console.log(props.handleGetRequest);
+
     return (
         <div>
             <form onSubmit={props.handleGetRequest}>

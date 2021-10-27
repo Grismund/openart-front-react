@@ -58,6 +58,11 @@ class Header extends Component {
                                          Categories
                                     </NavLink>
                                 </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/cat">
+                                         Cat
+                                    </NavLink>
+                                </NavItem>
                             </Nav>
                         </Collapse>
                             <div className="loginFixed">
