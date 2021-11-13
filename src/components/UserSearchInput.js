@@ -28,7 +28,6 @@ const UserSearchInput = (props) => {
                 />
                 <button 
                     className="col-xs-2 fa fa-arrow-right fa-2x btn text-secondary align-middle"
-                    // onClick={props.handleGetRequest}
                 ></button>
             </form>
         </div>

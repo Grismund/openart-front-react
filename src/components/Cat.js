@@ -1,7 +1,12 @@
+//TODO: This is the main component for the search functions.
+//TODO: Video: 53:28 - add click to expand functionality.
+
 import React from 'react';
 import UserSearchInput from './UserSearchInput';
+import SearchCheck from './SearchCheck';
+import CatResults from './CatResults';
 
-const searchTerm = {};
+// const searchTerm = {};
 
 class Cat extends React.Component {
 
@@ -31,50 +36,25 @@ class Cat extends React.Component {
         console.log(this.state.fetchedArt)
     }
 
-    // componentDidMount() {
-    //     this.handleGetRequest();
-    // }
     render() {
         return (
             <React.Fragment>
                 <div>
                     <UserSearchInput handleGetRequest = {this.handleGetRequest}/>
+                    <SearchCheck/>
                 </div>
                 {this.state.noSearchesYet ? (<div>Enter a search term to get started . . .</div>) :
+
                     <div className="container-fluid" >
                         <div className="row">
-                            {this.state.fetchedArt.map((artwork) => {
-                                return(
-                                    <div key={artwork.id} className="col-md-4">
-                                        <div className="card border-0 mb-4">
-                                            <img className="card-img" src={
-                                                `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
-                                                } alt={artwork.title} 
-                                            />
-                                            <div>
-                                                <div className="row searchResultCardText mx-0">
-                                                    <div className=" h3">{artwork.title}</div>
-                                                </div>
-                                                <div className="row searchResultCardText mx-0">
-                                                    <div className=" h6">{artwork.artist_title}</div>
-                                                </div>
-                                                <div className="row searchResultCardText mx-0">
-                                                    <button className="col-sm-3 col-md-6 btn btn-dark btn-block text-nowrap mr-auto">Buy Prints</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })
-                            }
+                            <CatResults fetchedArt={this.state.fetchedArt}/>
                         </div>
                     </div>
                 }
-            </React.Fragment>git 
+            </React.Fragment>
         )
     }
 }
 
 export default Cat;
-
 //42:00 Move the returns to a separate component.
