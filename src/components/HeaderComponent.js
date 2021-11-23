@@ -41,7 +41,7 @@ class Header extends Component {
                 <Navbar light sticky="top" color="white" expand="md">
                     <div className="container-fluid">   
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/imges/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/home"><img src="/assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
@@ -75,6 +75,33 @@ class Header extends Component {
                             </div>
                     </div>
                 </Navbar>
+
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                    <ModalBody>
+                        <Form onSubmit={this.handleLogin}>
+                            <FormGroup>
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="text" id="username" name="username"
+                                    innerRef={input => this.username = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" id="password" name="password"
+                                    innerRef={input => this.password = input} />
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="checkbox" name="remember"
+                                        innerRef={input => this.remember = input} />
+                                    Remember me
+                                </Label>
+                            </FormGroup>
+                            <Button type="submit" value="submit" color="primary">Login</Button>
+                        </Form>
+                    </ModalBody>
+                </Modal>
+
         </React.Fragment>
         );
     }

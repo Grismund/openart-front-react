@@ -2,9 +2,9 @@
 //TODO: Video: 53:28 - add click to expand functionality.
 
 import React from 'react';
-import UserSearchInput from './search/UserSearchInput';
-import SearchCheck from './search/SearchCheck';
-import SearchResults from './search/SearchResults';
+import UserSearchInput from './searchComponents/UserSearchInput';
+import SearchCheck from './searchComponents/SearchCheck';
+import SearchResults from './searchComponents/SearchResults';
 
 // const searchTerm = {};
 
