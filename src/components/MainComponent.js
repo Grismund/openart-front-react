@@ -5,7 +5,7 @@ import Header from './HeaderComponent';
 import Debug from './Debug';
 import Collections from './Collections';
 import Categories from './Categories';
-import Cat from './Cat';
+
 
 class Main extends Component {
     render() {
@@ -16,7 +16,6 @@ class Main extends Component {
                         <Route path='/home' component={ Debug } />
                         <Route path='/collections' component={ Collections } />
                         <Route path='/categories' component={ Categories } />
-                        <Route path='/cat' component={ Cat } />
                     </Switch>
                 <Footer />
             </React.Fragment>

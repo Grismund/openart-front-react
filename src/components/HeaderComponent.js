@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { LoginModal } from './LoginModal'
 
 class Header extends Component {
 
@@ -56,11 +57,6 @@ class Header extends Component {
                                 <NavItem>
                                     <NavLink className="nav-link" to="/categories">
                                          Categories
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/cat">
-                                         Cat
                                     </NavLink>
                                 </NavItem>
                             </Nav>
