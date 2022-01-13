@@ -1,0 +1,27 @@
+
+search term "umbrella"
+
+artist_title: "Salvador Dalí"
+id: 94090
+image_id: null
+medium_display: "Drypoint, lithograph and collage on white wove paper"
+title: "Anti-Umbrella with Atomized Liquid"
+_score: 131.12196
+
+artist_title: "Walter Hahn"
+id: 75097
+image_id: "e213941c-4621-88e4-a40c-946e0138cc31"
+medium_display: "Oil on canvas"
+title: "Still Life"
+_score: 126.90605
+
+if(props.fetchedArt.length === 0) {
+                    return(<div>No results were found.</div>)
+                } else {
+
+
+1/12/22
+check/radio box for search results started. I was struggling with how to run the hangleGetRequest method from two different components,
+(the search box and the check box). This article https://upmostly.com/tutorials/adding-multiple-functions-inside-a-single-onclick-event-handler
+made a case for just writing separate methods for each component to use within the main class component. It worked! I still have to 
+sort out the conditional logic (if the box is checked but no term is inserted...). Big win!

@@ -10,6 +10,8 @@ import {} from 'reactstrap';
 
 class Main extends Component {
     render() {
+        //TODO: loading localhost:3000 results in empty content. 
+        //TODO:FOUND! This is fixed by <Redirect>.
         return (
             <React.Fragment>
                 <Header />
@@ -17,6 +19,7 @@ class Main extends Component {
                         <Route path='/home' component={ Home } />
                         <Route path='/collections' component={ Collections } />
                         <Route path='/categories' component={ Categories } />
+                        <Redirect to='/home' />
                     </Switch>
                 <Footer />
             </React.Fragment>
