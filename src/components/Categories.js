@@ -21,15 +21,17 @@ class Categories extends React.Component {
         currentPage: 1,
         postsPerPage: 10,
         currentSearchTerm: null,
+        medium: "",
     };
 
     handleGetRequest = async (submit) => {
 
         //prevents the form from refreshing the page when it is submitted.
         submit.preventDefault();
-        
+        const medium = this.state.medium;
+        console.log("Medium in state from search box" + this.state.medium);
         const searchTerm = submit.target.elements.searchValue.value;
-        const url = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=id,title,artist_title,medium_display,image_id`;
+        const url = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}${medium}&fields=id,title,artist_title,medium_display,image_id`;
         
         // hardcoded url for testing below
         // const url = `https://api.artic.edu/api/v1/artworks/search?q=&query[term][artwork_type_id]=14&fields=id,title,artist_title,medium_display,image_id,artwork_type_title`;
@@ -51,6 +53,7 @@ class Categories extends React.Component {
         
         console.log(searchTerm)
         console.log(this.state.fetchedArt)
+        console.log(this.state.currentSearchTerm)
     }
     
     //TODO:Medium check
@@ -59,11 +62,13 @@ class Categories extends React.Component {
         // click.preventDefault();
 
         const medium = click.target.value;
+        console.log("Medium in state from radio" + this.state.medium);
         const url = `https://api.artic.edu/api/v1/artworks/search?q=${this.state.currentSearchTerm}${medium}&fields=id,title,artist_title,medium_display,image_id`;
         const request = await fetch(url);
         
         this.setState({
-            loading: true
+            loading: true,
+            medium: medium
         });
         
         const response = await request.json();
