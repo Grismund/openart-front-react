@@ -31,7 +31,7 @@ class Categories extends React.Component {
         const medium = this.state.medium;
         console.log("Medium in state from search box" + this.state.medium);
         const searchTerm = submit.target.elements.searchValue.value;
-        const url = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}${medium}&fields=id,title,artist_title,medium_display,image_id`;
+        const url = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}${medium}&limit=50&fields=id,title,artist_title,medium_display,image_id`;
         
         // hardcoded url for testing below
         // const url = `https://api.artic.edu/api/v1/artworks/search?q=&query[term][artwork_type_id]=14&fields=id,title,artist_title,medium_display,image_id,artwork_type_title`;
@@ -63,7 +63,7 @@ class Categories extends React.Component {
 
         const medium = click.target.value;
         console.log("Medium in state from radio" + this.state.medium);
-        const url = `https://api.artic.edu/api/v1/artworks/search?q=${this.state.currentSearchTerm}${medium}&fields=id,title,artist_title,medium_display,image_id`;
+        const url = `https://api.artic.edu/api/v1/artworks/search?q=${this.state.currentSearchTerm}${medium}&limit=50&fields=id,title,artist_title,medium_display,image_id`;
         const request = await fetch(url);
         
         this.setState({

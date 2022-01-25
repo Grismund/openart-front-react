@@ -25,3 +25,30 @@ check/radio box for search results started. I was struggling with how to run the
 (the search box and the check box). This article https://upmostly.com/tutorials/adding-multiple-functions-inside-a-single-onclick-event-handler
 made a case for just writing separate methods for each component to use within the main class component. It worked! I still have to 
 sort out the conditional logic (if the box is checked but no term is inserted...). Big win!
+
+Cleaned up logic for checking and searching so they played nicer with one another.
+
+01/24/22
+Overview of changes needed
+
+TODO: Front End
+- Display more results per search than 10.
+    Fixed with &limit=50
+- Paginate results (optionlly, I may implement this after I get the back end setup)
+    Reacstrap Pagination guide can be found here: https://deploy-preview-2356--reactstrap.netlify.app/components/pagination/#
+- Fix the carousel not automatically advancing bug.
+- Remove unused features:
+    - Shopping cart button
+    - Buy Print button
+    - Collections
+- Add contact/cross link to other work
+- Clean up alignment and spacing
+
+TODO: Back End
+- Create and Delete User
+- Authentication
+- Log in and Log out
+- Add / Remove Favorites
+- Create a favorites page
+
+work
