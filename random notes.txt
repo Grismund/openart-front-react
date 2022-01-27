@@ -32,11 +32,13 @@ Cleaned up logic for checking and searching so they played nicer with one anothe
 Overview of changes needed
 
 TODO: Front End
-- Display more results per search than 10.
+x Display more results per search than 10.
     Fixed with &limit=50
 - Paginate results (optionlly, I may implement this after I get the back end setup)
     Reacstrap Pagination guide can be found here: https://deploy-preview-2356--reactstrap.netlify.app/components/pagination/#
-- Fix the carousel not automatically advancing bug.
+x Fix the carousel not automatically advancing bug.
+    Wasn't a bug. Rather, reactstrap has particular ways of doing things. I plugged in vanilla reactstrap. 
+    I hate that I lose the responsive loading of images with srcset. There might be a way to code this in React by looking at the srcset code.
 - Remove unused features:
     - Shopping cart button
     - Buy Print button
@@ -52,3 +54,18 @@ TODO: Back End
 - Create a favorites page
 
 work
+Got Carousel working with basic reactstrap. Heavy-handed if/else statement for changing caption color though. 
+Need to fix my titles/captions. Maybe fix that if/else statement. Look for as substitute for the srcset property.
+Got 50 images returned. Can work on pagination based on the link above.
+
+
+
+01/26/22
+Fixed Carousel non-responsive image sizing by adding className="img-fluid" to each image.
+Messed up my node_modules trying to install a media query library for react. Removed node modules and reinstalled it. Works fine.
+Tried many things to get a responsive media query based image swap on the carousel. My clunky version would be doing the media query then having 
+    two methods to render two different sized carousels based on the device size. However, it seems like there would be a lot of unnecessary code.
+    Seems like I should be able to set the item source to a variable, and change that variable's value to a smaller/bigger image file based on the 
+    device size. But I'm having trouble wrapping my head around how to pass the state from the query componenet to the functional component for the 
+    carousel. Probably props no doubt. I think the HOME component should house the separate carousel component and render it. I can then pass the 
+    state down using props for it to be put into the item source as a variable. Work on that soon.
