@@ -1,12 +1,5 @@
 import React from 'react';
 
-// https://api.artic.edu/api/v1/artworks/search?q=cow&query[term][artwork_type_title]=coin&fields=id,title,artist_title,medium_display,image_id,artwork_type_title
-//      &query[term][artwork_type_id]=
-//      painting = 1
-//      photography = 2
-//      sclulpture = 3
-//      drawings = 14
-
 function SearchCheck(props) {
     return (
         <React.Fragment>
@@ -65,6 +58,8 @@ function SearchCheck(props) {
                             <label className="form-check-label" htmlFor="mediumPhotograpy">Photography</label>
                         </div>
                     </form>
+                    
+{/* This might be a feature to implement at a later date. */}
                 {/* <h3 className="h3">Style</h3>
                     <div className="form-check">
                         <input className="form-check-input" type="radio" value="" id="styleAbstract"/>

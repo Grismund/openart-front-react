@@ -56,8 +56,6 @@ class Categories extends React.Component {
         console.log(this.state.currentSearchTerm)
     }
     
-    //TODO:Medium check
-
     handleGetRequestCheck = async (click) => {
         // click.preventDefault();
 
