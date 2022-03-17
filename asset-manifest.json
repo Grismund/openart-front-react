@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/openartreact/static/css/main.9f5986bb.chunk.css",
+    "main.js": "/openartreact/static/js/main.04a66aac.chunk.js",
+    "main.js.map": "/openartreact/static/js/main.04a66aac.chunk.js.map",
+    "runtime-main.js": "/openartreact/static/js/runtime-main.a7ffcb3b.js",
+    "runtime-main.js.map": "/openartreact/static/js/runtime-main.a7ffcb3b.js.map",
+    "static/css/2.f01835c9.chunk.css": "/openartreact/static/css/2.f01835c9.chunk.css",
+    "static/js/2.5353abc8.chunk.js": "/openartreact/static/js/2.5353abc8.chunk.js",
+    "static/js/2.5353abc8.chunk.js.map": "/openartreact/static/js/2.5353abc8.chunk.js.map",
+    "static/js/3.6e95c5f6.chunk.js": "/openartreact/static/js/3.6e95c5f6.chunk.js",
+    "static/js/3.6e95c5f6.chunk.js.map": "/openartreact/static/js/3.6e95c5f6.chunk.js.map",
+    "index.html": "/openartreact/index.html",
+    "static/css/2.f01835c9.chunk.css.map": "/openartreact/static/css/2.f01835c9.chunk.css.map",
+    "static/css/main.9f5986bb.chunk.css.map": "/openartreact/static/css/main.9f5986bb.chunk.css.map",
+    "static/js/2.5353abc8.chunk.js.LICENSE.txt": "/openartreact/static/js/2.5353abc8.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/openartreact/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7ffcb3b.js",
+    "static/css/2.f01835c9.chunk.css",
+    "static/js/2.5353abc8.chunk.js",
+    "static/css/main.9f5986bb.chunk.css",
+    "static/js/main.04a66aac.chunk.js"
+  ]
+}
