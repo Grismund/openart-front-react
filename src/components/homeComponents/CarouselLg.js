@@ -10,7 +10,7 @@ import {
 
 const items = [
     {
-        src: 'assets/images/manet-l.jpg',
+        src: 'assets/images/manet-l.JPG',
         altText: 'painting by Manet',
         header: 'Explore',
         caption: 'Over 10,000 High Quality Works',
