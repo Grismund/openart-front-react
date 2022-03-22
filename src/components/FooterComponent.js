@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -6,19 +7,31 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-4 col-sm-2 offset-1">
-                        <h5>Links</h5>                    
+                        <h5>Links</h5>
                         <ul className="list-unstyled">
-                            <li><a href="#" className="footer-links">Home</a></li>
-                            <li><a href="collections.html" className="footer-links">Collections</a></li>                        
-                            <li><a href="categories.html" className="footer-links">Categories</a></li>
+                            <li>
+                                <NavLink className="footer-links" to="/home">
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="footer-links" to="/collections">
+                                    Collections
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="footer-links" to="/categories">
+                                    Categories
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                     <div className="col-6 col-sm-5 text-center">
                         <h5>Social</h5>
-                        <a className="btn footer-links" href="http://instagram.com/"><i className="fa fa-instagram"></i></a>
-                        <a className="btn footer-links" href="http://facebook.com/"><i className="fa fa-facebook"></i></a>
-                        <a className="btn footer-links" href="http://twitter.com/"><i className="fa fa-twitter"></i></a>
-                        <a className="btn footer-links" href="http://youtube.com/"><i className="fa fa-youtube"></i></a>
+                        <a className="btn footer-links" href="http://instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+                        <a className="btn footer-links" href="http://facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
+                        <a className="btn footer-links" href="http://twitter.com/" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
+                        <a className="btn footer-links" href="http://youtube.com/" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube"></i></a>
                     </div>
                     <div className="col-sm-4 text-center">
                         <ul className="list-unstyled">
