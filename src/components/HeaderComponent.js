@@ -41,7 +41,7 @@ class Header extends Component {
                 <Navbar light sticky="top" color="white" expand="md">
                     <div className="container-fluid">   
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/home"><img src="assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavbarBrand>
+                        <NavLink className="mr-auto, nav-link" to="/home"><img src="assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavLink>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
