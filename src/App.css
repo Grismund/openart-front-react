@@ -71,8 +71,10 @@ body {
 .searchArt {
   font-family:Arial, FontAwesome;
   margin-bottom: 0rem;
+  margin-left: 1rem;
   border: none;
   background-color: #f1f1f1;
+  width: 15rem;
 }
 
 .logo {

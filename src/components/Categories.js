@@ -88,7 +88,7 @@ class Categories extends React.Component {
                     <UserSearchInput handleGetRequest = {this.handleGetRequest}/>
                     <SearchCheck handleGetRequestCheck = {this.handleGetRequestCheck}/>
                 </div>
-                {this.state.noSearchesYet ? (<div>Enter a search term to get started . . .</div>) :
+                {this.state.noSearchesYet ? (<div></div>) :
 
                     <div className="container-fluid" >
                         <div className="row">
@@ -102,4 +102,3 @@ class Categories extends React.Component {
 }
 
 export default Categories;
-//42:00 Move the returns to a separate component.

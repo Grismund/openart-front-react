@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import SearchResults from './SearchResults';
+import React from 'react';
 
 const UserSearchInput = (props) => {
 
@@ -10,7 +9,7 @@ const UserSearchInput = (props) => {
                     type="text" 
                     name="searchValue" 
                     autoComplete="off" 
-                    className="h3 searchArt align-middle border-bottom" 
+                    className="h3 searchArt align-middle border-bottom " 
                     placeholder="&#xf002; Search" 
                     defaultValue="" 
                 />

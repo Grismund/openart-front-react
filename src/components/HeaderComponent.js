@@ -1,7 +1,6 @@
 import React, { Component }  from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { LoginModal } from './LoginModal'
 
 class Header extends Component {
 
@@ -39,23 +38,25 @@ class Header extends Component {
         return (
             <React.Fragment>
                 <Navbar light sticky="top" color="white" expand="md">
-                    <div className="container-fluid">   
+                    <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavLink className="mr-auto, nav-link" to="/home"><img src="assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavLink>
+                        {/* <NavLink className="mr-auto, nav-link" to="/home"><img src="assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavLink> */}
+                        <NavbarBrand className="mr-auto" href="https://open-art.netlify.app/#/home"><img src="/assets/images/raw-logo.png" className="logo" alt="OpenArt Logo" /></NavbarBrand>
+
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/home">
+                                    <NavLink className="nav-link" to="/home" onClick={this.toggleNav}>
                                          Home
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/collections">
+                                {/* <NavItem>
+                                    <NavLink className="nav-link" to="/collections" onClick={this.toggleNav}>
                                          Collections
                                     </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/categories">
+                                    <NavLink className="nav-link" to="/categories" onClick={this.toggleNav}>
                                          Categories
                                     </NavLink>
                                 </NavItem>

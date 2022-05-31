@@ -4,7 +4,7 @@ const SearchResults = (props) => {
 
         //if there are no results, notify, otherwise render results.
     if(props.fetchedArt.length === 0) {
-        return(<div>"Nothing to see here...alter your search"</div>)
+        return(<h2>We couldn't find anything that matches your search.</h2>)
     } else {
     return (
         <React.Fragment>
@@ -27,7 +27,7 @@ const SearchResults = (props) => {
                                         <div className=" h6">{artwork.artist_title}</div>
                                     </div>
                                     <div className="row searchResultCardText mx-0">
-                                        <button className="col-sm-3 col-md-6 btn btn-dark btn-block text-nowrap mr-auto">Buy Prints</button>
+                                        <button className="col-sm-3 col-md-6 btn btn-dark btn-block text-nowrap mr-auto">Favorite</button>
                                     </div>
                                 </div>
                             </div>

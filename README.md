@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Open Art
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open Art is a responsive, single-page application (SPA) using React.js. It is a search engine using a RESTful API from [The Art Institute of Chicago](https://api.artic.edu/docs/#introduction).
 
-## Available Scripts
+## Live Version
+[here](https://open-art.netlify.app/).
 
+## Technoligies Used
+
+  - React.js for component functionality.
+  - React-Router-DOM for single-page application functionality.
+  - ReactStrap for a mobile-first, responsive site.
+  - RESTful API for JSON data.
+  - CSS for styling.
+
+## Goals
+
+I wanted to design a mobile-first experience for browsing beautiful artwork.
+
+## Challenges
+
+  - Selecting the right API.
+  - Updating search parameters based on user clicks.
+  - Mobile optimized site using large images, especially on the home page's carousel component.
+
+## Solutions
+
+  - After a day of research, I found that [The Art Institute of Chicago](https://api.artic.edu/docs/#introduction) has a fantastic API. They offer their entire collection of art free to the public through a RESTful API without any development keys required. Their documentation is well-written and very well organized.
+  - To keep the mobile site running light, I decided to send a new GET request each time the user clicked on a filtering button rather than loading the entire JSON file into a mobile device and sorting it from there.
+  - For the carousel, I decided to create two separate carousel components in React, one with small, square-sized images for mobile devices, and another with large, landscape-oriented images for desktop. Then I built a media query function into the componentDidMount function to check what type of screen-size the user is browsing from. If it is mobile, the app renders the mobile-friendly carousel with smaller images and if it is desktop, the app renders the larger images.
+
+## Plans
+
+I have a lot of plans for this site that I am working on.
+  - Complete and integrate the back end. [Repo for the back end is here](https://github.com/Grismund/openartNodeJS).
+  - Add functionality for users to save images as favorites.
+  - Add functionality for users to publicly comment on images and report other users' problematic comments.
+
+## Running the Code
 In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
