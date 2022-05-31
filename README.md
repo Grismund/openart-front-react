@@ -3,9 +3,9 @@
 Open Art is a responsive, single-page application (SPA) using React.js. It is a search engine using a RESTful API from [The Art Institute of Chicago](https://api.artic.edu/docs/#introduction).
 
 ## Live Version
-[here](https://open-art.netlify.app/).
+The live version of the search engine can be found [here](https://open-art.netlify.app/).
 
-## Technoligies Used
+## Technologies Used
 
   - React.js for component functionality.
   - React-Router-DOM for single-page application functionality.
@@ -21,7 +21,7 @@ I wanted to design a mobile-first experience for browsing beautiful artwork.
 
   - Selecting the right API.
   - Updating search parameters based on user clicks.
-  - Mobile optimized site using large images, especially on the home page's carousel component.
+  - Optimizing the site for mobile users. Since the site deals with high resolution images and many landscape-oriented images, this was an important problem to tackle.
 
 ## Solutions
 
